@@ -1,0 +1,115 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: white;
+    color: #212529;
+}
+
+header {
+    position: relative;
+    background: linear-gradient(to right, pink, orange, yellow, #28a745);
+    color: red;
+    padding: 60px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Add a subtle overlay to soften the gradient for better image visibility */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    /* dark semi-transparent overlay */
+    z-index: 0;
+}
+
+/* Style the image */
+header img {
+    position: relative;
+    border: 4px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* subtle shadow */
+    max-width: 150px;
+    height: auto;
+    z-index: 1;
+    /* keep image on top of overlay */
+    border-radius: 8px;
+}
+
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 1rem;
+}
+
+header .social-icons a {
+    color: #ffffff;
+    font-size: 1.8rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+header .social-icons a:hover {
+    color: #0dcaf0;
+    transform: scale(1.2);
+}
+
+/* Override icon color in contact section */
+#contact .social-icons a {
+    color: #212529;
+}
+
+#contact .social-icons a:hover {
+    color: #0d6efd;
+}
+
+/* Sections */
+section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Skill Icons */
+#skills i {
+    display: block;
+    margin: auto;
+}
+
+/* Cards */
+.card {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Form */
+form label {
+    font-weight: 500;
+}
+
+form .form-control {
+    border-radius: 0.25rem;
+}
+
+/* Footer */
+footer {
+    background-color: #f1f1f1;
+    font-size: 0.9rem;
+}
+
+/* General Social Icons */
+.social-icons a {
+    color: #333;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #0d6efd;
+}
