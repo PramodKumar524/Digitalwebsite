@@ -1,17 +1,14 @@
-// Dynamic greeting based on time of day
-window.addEventListener('DOMContentLoaded', () => {
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
     const greetingEl = document.getElementById('greeting');
-    const now = new Date();
-    const hour = now.getHours();
-    let greeting = '';
+    if (!greetingEl) return; // Avoid error if element doesn't exist
 
-    if (hour < 12) {
-        greeting = 'Good Morning!';
-    } else if (hour < 18) {
-        greeting = 'Good Afternoon!';
-    } else {
-        greeting = 'Good Evening!';
-    }
+    const hour = new Date().getHours();
+    const greeting =
+      hour < 12 ? 'Good Morning!' : 
+      hour < 18 ? 'Good Afternoon!' :
+       'Good Evening!';
 
     greetingEl.textContent = greeting;
-});
+  });
+</script>
