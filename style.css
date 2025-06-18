@@ -8,7 +8,7 @@ body {
 
 header {
     position: relative;
-    background: linear-gradient(to right, pink, orange, yellow, #28a745);
+    background: linear-gradient(to left, pink, orange, yellow, #28a745);
     color: red;
     padding: 60px 20px;
     text-align: center;
