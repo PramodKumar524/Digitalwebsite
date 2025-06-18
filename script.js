@@ -1,12 +1,9 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const greetingEl = document.getElementById('greeting');
-  if (!greetingEl) return;
+function toggleMenu() {
+  const nav = document.getElementById("slideNav");
+  nav.classList.toggle("open");
+}
 
-  const hour = new Date().getHours();
-  const greeting =
-    hour < 12 ? 'Good Morning!' :
-    hour < 18 ? 'Good Afternoon!' :
-    'Good Evening!';
-
-  greetingEl.textContent = greeting;
-});
+function closeMenu() {
+  const nav = document.getElementById("slideNav");
+  nav.classList.remove("open");
+}

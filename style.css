@@ -8,14 +8,14 @@ body {
 
 header {
     position: relative;
-    background: linear-gradient(to left, pink, orange, yellow, #28a745);
-    color: red;
+    background-color: #f8f9fa; /* light background */
+    color: #212529; /* dark text */
     padding: 60px 20px;
     text-align: center;
     overflow: hidden;
 }
 
-/* Add a subtle overlay to soften the gradient for better image visibility */
+/* Optional: remove overlay if not needed for light background */
 header::before {
     content: "";
     position: absolute;
@@ -23,24 +23,20 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    /* dark semi-transparent overlay */
+    background: rgba(255, 255, 255, 0.2); /* softer overlay for light bg */
     z-index: 0;
 }
 
-/* Style the image */
+/* Profile Image */
 header img {
     position: relative;
     border: 4px solid white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    /* subtle shadow */
-    max-width: 150px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 220px; /* increased profile image size */
     height: auto;
     z-index: 1;
-    /* keep image on top of overlay */
-    border-radius: 8px;
+    border-radius: 10px;
 }
-
 
 /* Social Icons */
 .social-icons {
@@ -51,7 +47,7 @@ header img {
 }
 
 header .social-icons a {
-    color: #ffffff;
+    color: #212529; /* dark icon color for light background */
     font-size: 1.8rem;
     transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -100,6 +96,7 @@ form .form-control {
 footer {
     background-color: #f1f1f1;
     font-size: 0.9rem;
+    color: #212529;
 }
 
 /* General Social Icons */
@@ -112,4 +109,15 @@ footer {
 
 .social-icons a:hover {
     color: #0d6efd;
+}
+
+/* Project Section Image Styling */
+#projects img {
+    max-width: 100%;
+    height: auto;
+    width: 200px; /* smaller project images */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
 }
