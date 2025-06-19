@@ -74,7 +74,7 @@ section {
 
 /* Skills */
 #skills i {
-  display: block;
+  display: flex;
   margin: auto;
 }
 
@@ -108,7 +108,7 @@ section {
 }
 
 .project-card img {
-  max-height: 160px;
+  max-height: 100px;
   object-fit: cover;
   border-radius: 0.5rem 0.5rem 0 0;
   width: 100%;
