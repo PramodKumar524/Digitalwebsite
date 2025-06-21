@@ -3,232 +3,191 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pramod Kumar R | Portfolio</title>
+
+  <!-- Font Awesome
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-RXf+QSDCUQs6Q0zAE1L6Kz+U5zxQyT6Ls8A2Ufg5TUR+WkFg3hAn1uAoR8sJNk+1Ujw2N7+3Tf0C5K9K6C+ATA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <Custom CSS -->
+  <!-- <link rel="stylesheet" href="style.css" />
+</head> --> 
+
+<head>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pramod Kumar R | Portfolio</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <!-- Custom CSS -->
+  <!-- ✅ Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-RXf+..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- ✅ Your styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
+
 <body>
-  <!-- Header -->
-  <header class="bg-dark text-white text-center py-5 mb-4">
-    <div class="container">
-      <img src="images/pramod.jpg" alt="Pramod Kumar R" class="rounded-circle mb-3" width="150" height="150" />
-      <h1>Pramod Kumar R</h1>
-      <p class="lead">Web Developer | Java Programmer | Software Engineer</p>
-      <p id="greeting" class="h5"></p>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">Pramod</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+      <a href="#about" onclick="closeMenu()">About</a>
+      <a href="#skills" onclick="closeMenu()">Skills</a>
+      <a href="#projects" onclick="closeMenu()">Projects</a>
+      <a href="#internship" onclick="closeMenu()">Internship</a>
+      <a href="#work-experience" onclick="closeMenu()">Experience</a>
+      <a href="#certifications" onclick="closeMenu()">Certifications</a>
+      <a href="#contact" onclick="closeMenu()">Contact</a>
     </div>
-  </header>
+  </div>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-container">
+      <img src="images/pramod.jpg" alt="Pramod Kumar R" class="profile-image" />
+      <h1>Pramod Kumar R</h1>
+      <p class="tagline">Web Developer | Java Programmer | Software Engineer</p>
+    </div>
+  </div>
 
   <!-- Social Icons -->
-  <div class="social-icons text-center mt-4">
-    <a href="https://www.linkedin.com/in/pramodkumarr129" target="_blank" aria-label="LinkedIn"><i
-        class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/PramodKumar524" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-    <a href="https://www.hackerrank.com/profile/pramodkumarraj11" target="_blank" aria-label="HackerRank"><i
-        class="fab fa-hackerrank"></i></a>
-    <a href="https://leetcode.com/u/UNXcsUN59j/" target="_blank" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/in/pramodkumarr129" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/PramodKumar524" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.hackerrank.com/profile/pramodkumarraj11" target="_blank"><i class="fab fa-hackerrank"></i></a>
+    <a href="https://leetcode.com/u/UNXcsUN59j/" target="_blank"><i class="fas fa-code"></i></a>
   </div>
 
   <!-- Main Content -->
-  <main class="container">
-    <!-- About Me -->
-    <section id="about" class="mb-5">
-      <h2 class="text-center mb-4">About Me</h2>
-      <p class="lead text-center">
-        <b>I'm a passionate and motivated Software Engineer with a strong foundation in Java, web development, and
-          database management. As a recent graduate, I’ve built multiple full-stack and core Java projects that reflect
-          my hands-on learning, problem-solving skills, and eagerness to build real-world applications.I enjoy working
-          with technologies like HTML, CSS, JavaScript, Java, and MySQL, and I'm constantly expanding my skills through
-          personal projects, internships, and certifications. I'm actively looking for an opportunity to contribute to a
-          team where I can learn, grow, and build meaningful software solutions.
-      </p></b>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="mb-5">
-      <h2 class="mb-4">Skills</h2>
-      <div class="row g-3 text-center">
-        <div class="col-6 col-md-3">
-          <div class="p-3 border rounded"><i class="fab fa-java fa-2x text-danger mb-2"></i>
-            <h5>Java</h5>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="p-3 border rounded"><i class="fab fa-html5 fa-2x text-warning mb-2"></i>
-            <h5>HTML</h5>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="p-3 border rounded"><i class="fab fa-css3-alt fa-2x text-primary mb-2"></i>
-            <h5>CSS</h5>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="p-3 border rounded"><i class="fab fa-js-square fa-2x text-warning mb-2"></i>
-            <h5>JavaScript</h5>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="p-3 border rounded"><i class="fas fa-database fa-2x text-success mb-2"></i>
-            <h5>SQL</h5>
-          </div>
-        </div>
-        <!-- <div class="col-6 col-md-3"><div class="p-3 border rounded"><i class="fab fa-python fa-2x text-info mb-2"></i><h5>Python</h5></div></div>
-        <div class="col-6 col-md-3"><div class="p-3 border rounded"><i class="fab fa-bootstrap fa-2x text-purple mb-2"></i><h5>Bootstrap</h5></div></div> -->
+  <div class="main-container">
+    <div id="about" class="section">
+      <h2>About Me</h2>
+      <div class="section-content">
+        <p><b>I'm a passionate and motivated Software Engineer with a strong foundation in Java, web development, and database management. I enjoy building full-stack applications and constantly improving my skills through practice and projects.</b></p>
       </div>
-    </section>
+    </div>
 
-    <!-- Projects -->
-    <section id="projects" class="mb-5">
-      <h2 class="text-center mb-4">Projects</h2>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <div class="card project-card h-100">
-            <img src="images/portfolio.png" class="card-img-top" alt="Portfolio Website">
-            <div class="card-body text-center">
-              <h5 class="card-title">Portfolio Website</h5>
-              <p class="card-text">A responsive personal website built using HTML, CSS, and JavaScript to showcase my
-                projects, skills, certifications, and contact info.</p>
-              <a href="https://github.com/PramodKumar524/Personal_Portfolo" target="_blank"
-                class="btn btn-outline-primary btn-sm">View Repo</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card project-card h-100">
-            <img src="images/library.png" class="card-img-top" alt="Library Management System">
-            <div class="card-body text-center">
-              <h5 class="card-title">Library Management System</h5>
-              <p class="card-text">JBuilt a menu-driven application using Java OOP concepts and collections to manage
-                books, users, and transactions. Enabled operations like adding, deleting, issuing, and returning books
-                with validations and structured output. Demonstrated command over class design, data structures, and
-                modular programming.
+    <div id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item"><i class="fab fa-java"></i><h5>Java</h5></div>
+        <div class="skill-item"><i class="fab fa-html5"></i><h5>HTML</h5></div>
+        <div class="skill-item"><i class="fab fa-css3-alt"></i><h5>CSS</h5></div>
+        <div class="skill-item"><i class="fab fa-js-square"></i><h5>JavaScript</h5></div>
+        <div class="skill-item"><i class="fas fa-database"></i><h5>SQL</h5></div>
+      </div>
+    </div>
 
-              </p>
-              <a href="https://github.com/PramodKumar524/Libray-sys-mgt" target="_blank"
-                class="btn btn-outline-primary btn-sm">View Repo</a>
-            </div>
-          </div>
+    <div id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="images/portfolio.png" alt="Portfolio Website" />
+          <h3>Portfolio Website</h3>
+          <p>Built with HTML, CSS, and JS. Showcases my profile and work.</p>
+          <a href="https://github.com/PramodKumar524/Personal_Portfolo" target="_blank">View Repo</a>
         </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card project-card h-100">
-            <img src="images/Online hostel.png" class="card-img-top" alt="Online Hostel Management">
-            <div class="card-body text-center">
-              <h5 class="card-title">Online Hostel Management</h5>
-              <p class="card-text">A database-driven application that streamlines student registration, room allocation,
-                and record management using Java and MySQL. Implemented CRUD operations, user authentication, and
-                real-time updates, demonstrating practical understanding of backend logic and database integration.</p>
-              <a href="https://github.com/PramodKumar524/Online_Hostel_mgt" target="_blank"
-                class="btn btn-outline-primary btn-sm">View Repo</a>
-            </div>
-          </div>
+        <div class="project-card">
+          <img src="images/library.png" alt="Library Management System" />
+          <h3>Library Management System</h3>
+          <p>Java-based system using OOP and collections for managing books.</p>
+          <a href="https://github.com/PramodKumar524/Libray-sys-mgt" target="_blank">View Repo</a>
         </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card project-card h-100">
-            <img src="images/clock.png" class="card-img-top" alt="Digital Clock">
-            <div class="card-body text-center">
-              <h5 class="card-title">Digital Clock</h5>
-              <p class="card-text">Built a dynamic digital clock using HTML, CSS, and JavaScript that updates in
-                real-time. Utilized DOM manipulation and setInterval() for time rendering and formatting..</p>
-              <a href="https://github.com/PramodKumar524/Dom_Manipualation_Dynamiclk" target="_blank"
-                class="btn btn-outline-primary btn-sm">View Repo</a>
-            </div>
-          </div>
+        <div class="project-card">
+          <img src="images/Online hostel.png" alt="Online Hostel Management" />
+          <h3>Online Hostel Management</h3>
+          <p>Built using Java and MySQL to manage hostel data and allocation.</p>
+          <a href="https://github.com/PramodKumar524/Online_Hostel_mgt" target="_blank">View Repo</a>
+        </div>
+        <div class="project-card">
+          <img src="images/clock.png" alt="Digital Clock" />
+          <h3>Digital Clock</h3>
+          <p>Real-time clock using JS and DOM manipulation.</p>
+          <a href="https://pramodkumar524.github.io/Dom_Manipualation_Dynamiclk/" target="_blank">View Repo</a>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- Internship -->
-    <section id="internship" class="mb-5">
+    <div id="internship" class="section">
       <h2>Internship</h2>
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Python & Data Science Intern – Aqumenz Automation Pvt.Ltd, Bengaluru</h5>
-          <p><strong>Duration:</strong> 1 Month</p>
-          <p>Worked with Python, Pandas, NumPy, matplotlib and ML using scikit-learn on real-world datasets.</p>
-          <p><a href="images/aqumenz certificate.pdf" target="_blank">View Certificate</a></p>
-        </div>
+      <div class="center-card">
+        <h4>Aqumenz Automation Pvt. Ltd, Bengaluru</h4>
+        <p><b>Duration:</b> 1 Month</p>
+        <p>Worked on data science projects using Python, Pandas, NumPy, and ML algorithms.</p>
+        <a href="images/aqumenz certificate.pdf" target="_blank">View Certificate</a>
       </div>
-    </section>
+    </div>
 
-    <!-- Work Experience -->
-    <section id="work-experience" class="mb-5">
+    <div id="work-experience" class="section">
       <h2>Work Experience</h2>
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Campus Ambassador – Acmegrade Pvt.Ltd</h5>
-          <p><strong>Aug 2023 - Sep 2024</strong></p>
-          <p>Promoted company offerings and managed student outreach on campus.</p>
+      <div class="center-card">
+        <h4>Campus Ambassador – Acmegrade Pvt.Ltd</h4>
+        <p><b>Aug 2023 - Sep 2024</b></p>
+        <p>Handled promotions, events, and outreach on college campus.</p>
+      </div>
+    </div>
+
+    <div id="certifications" class="section">
+      <h2>Certifications</h2>
+      <div class="cert-list">
+        <div class="cert-item">
+          <p>Software Engineering and Agile - <b>Infosys Springboard</b></p>
+          <a href="https://drive.google.com/file/d/1Xwk7VtAtpIN5TZEm6Nf7-wDBViAQuX-9/view" target="_blank">View Certificate</a>
+        </div>
+        <div class="cert-item">
+          <p>Time Management - <b>Infosys Springboard</b></p>
+          <a href="https://drive.google.com/file/d/1trVg6BUbajAsz2wotqy3YbsNezjll_Mq/view" target="_blank">View Certificate</a>
+        </div>
+        <div class="cert-item">
+          <p>Web Design Technology - <b>SoftwarePro</b></p>
+          <a href="https://drive.google.com/file/d/1ZnF2dhDzeWVnd-Kg2CDWRAwREWK2JroN/view" target="_blank">View Certificate</a>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- Certifications -->
-    <section id="certifications" class="mb-5">
-      <h2>Certifications</h2>
-      <ul class="list-group">
-        <li class="list-group-item">Software Engineering and Agile Methadologies -<b>Infosys Springboard</b>
-          <p><a href=https://drive.google.com/file/d/1Xwk7VtAtpIN5TZEm6Nf7-wDBViAQuX-9/view?usp=drive_link
-              target="_blank">View Certificate</a></p>
-        </li>
-        <li class="list-group-item">Time Management- <b>Infosys Springboard</b>
-          <p><a href="https://drive.google.com/file/d/1trVg6BUbajAsz2wotqy3YbsNezjll_Mq/view?usp=sharing"
-              target="_blank">View Certificate</a></p>
-        </li>
-        <li class="list-group-item">Web design Technology- <b>SoftwarePro</b>
-          <p><a href=https://drive.google.com/file/d/1ZnF2dhDzeWVnd-Kg2CDWRAwREWK2JroN/view?usp=drive_link
-              target="_blank">View Certificate</a></p>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="mb-5">
+    <div id="contact" class="section">
       <h2>Contact Me</h2>
-      <form action="#" method="post" class="row g-3">
-        <div class="col-md-6">
-          <label for="name" class="form-label">Name:</label>
-          <input type="text" id="name" name="name" class="form-control" required />
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
         </div>
-        <div class="col-md-6">
-          <label for="email" class="form-label">Email:</label>
-          <input type="email" id="email" name="email" class="form-control" required />
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
         </div>
-        <div class="col-12">
-          <label for="message" class="form-label">Message:</label>
-          <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
         </div>
-        <div class="social-icons text-center mt-4">
-          <a href="https://www.linkedin.com/in/pramodkumarr129" target="_blank" aria-label="LinkedIn"><i
-              class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/PramodKumar524" target="_blank" aria-label="GitHub"><i
-              class="fab fa-github"></i></a>
-          <a href="https://www.hackerrank.com/profile/pramodkumarraj11" target="_blank" aria-label="HackerRank"><i
-              class="fab fa-hackerrank"></i></a>
-          <a href="https://leetcode.com/u/UNXcsUN59j/" target="_blank" aria-label="LeetCode"><i
-              class="fas fa-code"></i></a>
-        </div>
-        <div class="col-12 text-center mt-3">
-          <button type="submit" class="btn btn-primary">Send Message</button>
+        <div class="form-submit">
+          <button type="submit">Send Message</button>
         </div>
       </form>
-    </section>
-  </main>
+    </div>
+  </div>
 
   <!-- Footer -->
-  <footer class="bg-light text-center py-3">
+  <div class="footer">
     <p>© 2025 Pramod Kumar R</p>
-  </footer>
+  </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+  <!-- Script -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('show');
+    }
+    function closeMenu() {
+      document.getElementById('navLinks').classList.remove('show');
+    }
+  </script>
 </body>
 
 </html>
