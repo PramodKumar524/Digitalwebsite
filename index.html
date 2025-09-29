@@ -1,18 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pramod Kumar R | Portfolio</title>
-
-  <!-- Font Awesome
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-RXf+QSDCUQs6Q0zAE1L6Kz+U5zxQyT6Ls8A2Ufg5TUR+WkFg3hAn1uAoR8sJNk+1Ujw2N7+3Tf0C5K9K6C+ATA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <Custom CSS -->
-  <!-- <link rel="stylesheet" href="style.css" />
-</head> --> 
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,37 +9,264 @@
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-RXf+..."
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
 
   <!-- ✅ Your styles -->
   <link rel="stylesheet" href="style.css" />
-</head>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
 
+    a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #111;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    .menu-icon {
+      font-size: 1.8em;
+      cursor: pointer;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0; /* 👉 Change to right:0 if you want right-side */
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.4s;
+      padding-top: 60px;
+      z-index: 2000;
+    }
+
+    .sidebar a {
+      padding: 12px 25px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #fff;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #00bcd4;
+      color: black;
+    }
+
+    .sidebar .closebtn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 30px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #111;
+    }
+    .profile-image {
+      width: 150px;
+      border-radius: 50%;
+      border: 4px solid #00bcd4;
+    }
+    .tagline {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #00bcd4;
+    }
+
+    /* Social Icons */
+    .social-icons {
+      text-align: center;
+      margin: 15px 0;
+    }
+    .social-icons a {
+      color: darkslategray;
+      font-size: 1.4em;
+      margin: 0 10px;
+    }
+
+    /* Main Container */
+    .main-container {
+      padding: 20px;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 50px;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00bcd4;
+    }
+
+    /* About Section */
+    .section-content {
+      background-color: #1c1c1c;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .skill-item {
+      background-color: #1c1c1c;
+      padding: 15px 25px;
+      border-radius: 8px;
+      text-align: center;
+      width: 100px;
+      color: #fff;
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .project-card {
+      background-color: #1c1c1c;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      text-align: center;
+    }
+    .project-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* Internship, Work, Certifications */
+    .center-card,
+    .cert-item {
+      max-width: 600px;
+      margin: 0 auto 20px auto;
+      background-color: #1c1c1c;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .cert-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    /* Contact Section */
+    form {
+      background-color: #1c1c1c;
+      padding: 30px 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+    }
+    .form-submit {
+      text-align: center;
+      margin-top: 15px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #00bcd4;
+      border: none;
+      border-radius: 5px;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #00acc1;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #111;
+      color: #888;
+    }
+  </style>
+</head>
 
 <body>
   <!-- Navbar -->
   <div class="navbar">
     <div class="logo">Pramod</div>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    <div class="nav-links" id="navLinks">
-      <a href="#about" onclick="closeMenu()">About</a>
-      <a href="#skills" onclick="closeMenu()">Skills</a>
-      <a href="#projects" onclick="closeMenu()">Projects</a>
-      <a href="#internship" onclick="closeMenu()">Internship</a>
-      <a href="#work-experience" onclick="closeMenu()">Experience</a>
-      <a href="#certifications" onclick="closeMenu()">Certifications</a>
-      <a href="#contact" onclick="closeMenu()">Contact</a>
-    </div>
+    <div class="menu-icon" onclick="toggleSidebar()">☰</div>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+    <a href="#about" onclick="closeSidebar()">About</a>
+    <a href="#skills" onclick="closeSidebar()">Skills</a>
+    <a href="#projects" onclick="closeSidebar()">Projects</a>
+    <a href="#internship" onclick="closeSidebar()">Internship</a>
+    <a href="#work-experience" onclick="closeSidebar()">Experience</a>
+    <a href="#certifications" onclick="closeSidebar()">Certifications</a>
+    <a href="#contact" onclick="closeSidebar()">Contact</a>
   </div>
 
   <!-- Header -->
   <div class="header">
     <div class="header-container">
       <img src="images/pramod.jpg" alt="Pramod Kumar R" class="profile-image" />
-      <h1>Pramod Kumar R</h1>
+      <h1 id="greeting">Hello!</h1>
       <p class="tagline">Web Developer | Java Programmer | Software Engineer</p>
     </div>
   </div>
@@ -181,13 +395,25 @@
 
   <!-- Script -->
   <script>
-    function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('show');
+    // Sidebar functions
+    function toggleSidebar() {
+      document.getElementById("sidebar").style.width = "250px";
     }
-    function closeMenu() {
-      document.getElementById('navLinks').classList.remove('show');
+    function closeSidebar() {
+      document.getElementById("sidebar").style.width = "0";
     }
+
+    // Time-based greeting
+    window.addEventListener("DOMContentLoaded", () => {
+      const greeting = document.getElementById("greeting");
+      const hour = new Date().getHours();
+      greeting.textContent =
+        hour < 12
+          ? "Good Morning!"
+          : hour < 17
+          ? "Good Afternoon!"
+          : "Good Evening!";
+    });
   </script>
 </body>
-
 </html>
